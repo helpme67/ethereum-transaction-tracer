@@ -28,7 +28,7 @@
   "dependencies": {
     "before-exit": "1.0.0",
     "config": "1.30.0",
-    "cuid": "2.1.1",
+    "cuid": "2.1.8",
     "newrelic": "5.9.0",
     "restify": "7.2.0",
     "restify-cors-middleware": "1.1.0",
