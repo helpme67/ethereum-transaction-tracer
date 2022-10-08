@@ -22,21 +22,23 @@
     "dev": "nodemon -w . server.js",
     "lint": "eslint --cache .",
     "precommit": "npm run lint",
-    "prepare": "patch-package",
-    "prepush": "npm run check"
+    "prepare": "npm run snyk-protect && patch-package",
+    "prepush": "npm run check",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "before-exit": "1.0.0",
     "config": "1.30.0",
     "cuid": "2.1.1",
     "newrelic": "5.9.0",
-    "restify": "7.2.0",
+    "restify": "8.1.0",
     "restify-cors-middleware": "1.1.0",
     "restify-router": "0.5.0",
-    "web3": "1.0.0-beta.34",
+    "web3": "1.7.5",
     "winston": "2.4.2",
     "winston-papertrail": "1.0.5",
-    "winston-sentry-transport": "1.0.0"
+    "winston-sentry-transport": "1.0.0",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "dependency-check": "3.1.0",
@@ -57,5 +59,6 @@
   "engines": {
     "node": "8",
     "npm": "5"
-  }
+  },
+  "snyk": true
 }
